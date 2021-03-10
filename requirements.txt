@@ -1,4 +1,4 @@
-tensorflow
+pytorch
 numpy
 scipy
 scikit-learn
