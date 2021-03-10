@@ -7,6 +7,5 @@ fastapi
 uvicorn
 transformers
 gunicorn
-python==3.7.10
 uvloop
 httptools
