@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+<script src="scriptC.js"></script>
+
+<body>
+
+<h2>My First JavaScript</h2>
+<br>
+<form>  
+    <label for="fname2">First name:</label><br>
+    <br>
+
+    <input type="text" id="fname2" name="fname2" value="John"><br>
+</form>
+<br>
+<br>
+<br>
+<button type="button"
+onclick="post2()">
+Click me to display Date and Time.</button>
+
+<form>
+    <br>
+    <label for="fname">Score:</label><br>
+    <br>
+    
+    <input type="text" id="fname" name="fname" value="John"><br>
+</form>
+
+<p id="demo"></p>
+
+</body>
+<script>
+    function display(data){
+        console.log(data)
+        document.getElementById('fname').value = data.prediction
+    }
+    function post2(){
+        post1(document.getElementById('fname2').value, display)
+    }
+</script>
+</html> 
