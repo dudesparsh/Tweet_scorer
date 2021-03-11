@@ -2,6 +2,7 @@
 from transformers import pipeline
 import pandas as pd
 import numpy as np
+from fastapi.middleware.cors import CORSMiddleware
 
 # importing for API
 import uvicorn
@@ -9,7 +10,19 @@ from fastapi import FastAPI
 from Scores import Score
 import pickle
 
+origins = [
+    "*"
+]
+
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 sentimentanalyzer = pipeline("sentiment-analysis")
 
